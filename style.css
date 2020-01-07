@@ -1,0 +1,31 @@
+html {
+  background-color: black;
+}
+
+@media all and (max-width: 599px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+}
+
+.logoImage {
+  height: 10vw;
+}
+
+.prompt {
+  color: white;
+  margin-top: 1vh;
+}
+
+.dropDown {
+  margin-top: 1vh;
+  color: white;
+}
