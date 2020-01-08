@@ -14,26 +14,43 @@
       <a
         ><img src="/assets/images/nyt-logo.svg" class="logoImage" alt="logo" />
       </a>
-      <section class="prompt">
-        <h1>Choose a section:</h1>
-      </section>
-
-      <section class="dropDown">
-        <select>
-          <option>Arts</option>
-          <option>Automobiles</option>
-          <option>Books</option>
-          <option>business</option>
-          <option>Fashion</option>
-          <option>Food</option>
-          <option>Health</option>
-          <option>Home</option>
-          <option>Insider</option>
-          <option>magazine</option>
+      <section class="dropDownMenu">
+        <h1 id="prompt">Choose a section:</h1>
+        <select class="dropDownMenu">
+          <!-- each options needs a value -->
+          <option>Sections...</option>
+          <option value="arts">Arts</option>
+          <option value="automobiles">Automobiles</option>
+          <option value="books">Books</option>
+          <option value="business">business</option>
+          <option value="fashion">Fashion</option>
+          <option value="food">Food</option>
+          <option value="health">Health</option>
+          <option value="home">Home</option>
+          <option value="insider">Insider</option>
+          <option value="magazine">Magazine</option>
+          <option value="movies">Movies</option>
+          <option value="national">National</option>
+          <option value="nyregion">NY Region</option>
+          <option value="obituaries">Obituaries</option>
+          <option value="option">Opinion</option>
+          <option value="politics">Politics</option>
+          <option value="realestate">Real Estate</option>
+          <option value="science">Science</option>
+          <option value="sports">Sports</option>
+          <option value="sundayreview">Sunday Review</option>
+          <option value="technology">Technology</option>
+          <option value="theater">Theater</option>
+          <option value="tmagazine">T Magazine</option>
+          <option value="travel">Travel</option>
+          <option value="upshot">Upshot</option>
+          <option value="world">World</option>
         </select>
-        <!-- arts, automobiles, books, business, fashion, food, health, home, insider, magazine, movies, national, nyregion, obituaries, opinion, politics, realestate, science, sports, sundayreview, technology, theater, tmagazine, travel, upshot, world -->
+        <!-- arts value= "", automobiles, books, business, fashion, food, health, home, insider, magazine, movies, national, nyregion, obituaries, opinion, politics, realestate, science, sports, sundayreview, technology, theater, tmagazine, travel, upshot, world -->
       </section>
     </header>
+
+    <section class="articleDisplay"></section>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="index.js"></script>

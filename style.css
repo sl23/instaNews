@@ -2,30 +2,75 @@ html {
   background-color: black;
 }
 
+header {
+  display: flex;
+  flex-direction: row;
+  height: 10vh;
+}
+
+.logoImage {
+  height: 10vh;
+}
+
+#prompt {
+  color: white;
+}
+
+.dropDown {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1vh;
+}
+
+.article {
+  position: relative;
+  text-align: center;
+}
+
+.articleDisplay {
+  color: white;
+  height: 70vh;
+  align-items: center;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, 25vw);
+  grid-template-rows: auto;
+}
+
+#articleImages {
+  height: 100%;
+  width: 100%;
+}
+
+#articleAbstracts {
+  z-index: 1;
+  position: absolute;
+  bottom: 4px;
+  background: black;
+  opacity: 70%;
+  font-size: 16px;
+}
+
 @media all and (max-width: 599px) {
   header {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 100vh;
   }
-}
+  .logoImage {
+    height: 20vw;
+  }
 
-header {
-  display: flex;
-  flex-direction: row;
-}
-
-.logoImage {
-  height: 10vw;
-}
-
-.prompt {
-  color: white;
-  margin-top: 1vh;
-}
-
-.dropDown {
-  margin-top: 1vh;
-  color: white;
+  .articleDisplay {
+    color: white;
+    height: 70vh;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(1, 100vw);
+    grid-template-rows: auto;
+    height: 60vh;
+  }
 }
