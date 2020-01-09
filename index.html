@@ -10,12 +10,11 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <a
-        ><img src="/assets/images/nyt-logo.svg" class="logoImage" alt="logo" />
-      </a>
-      <section class="dropDownMenu">
+    <header class="headerBig">
+      <img src="/assets/images/nyt-logo.svg" class="logoImage" alt="logo" />
+      <section class="dropDown">
         <h1 id="prompt">Choose a section:</h1>
+
         <select class="dropDownMenu">
           <!-- each options needs a value -->
           <option>Sections...</option>
@@ -46,11 +45,16 @@
           <option value="upshot">Upshot</option>
           <option value="world">World</option>
         </select>
-        <!-- arts value= "", automobiles, books, business, fashion, food, health, home, insider, magazine, movies, national, nyregion, obituaries, opinion, politics, realestate, science, sports, sundayreview, technology, theater, tmagazine, travel, upshot, world -->
       </section>
     </header>
 
+    <section class="loadingGIF">
+      <img class="loader" src="assets/images/ajax-loader.gif" />
+    </section>
+
     <section class="articleDisplay"></section>
+
+    <section class="footer">Copyright 2016 INSTANEWS</section>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="index.js"></script>

@@ -2,18 +2,61 @@ html {
   background-color: black;
 }
 
-header {
-  display: flex;
-  flex-direction: row;
+@font-face {
+}
+
+.headerBig {
+  height: 95vh;
+}
+
+.headerLoading {
+  height: 70vh;
+}
+
+.headerSmall {
   height: 10vh;
 }
 
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: all 2s ease-in-out;
+}
+
+.footer {
+  color: white;
+  font-size: 16px;
+  display: flex;
+  height: 5vh;
+  justify-content: center;
+  align-items: center;
+}
+
 .logoImage {
+  height: 40%;
+}
+
+.logoImageSmall {
+  height: 8vh;
+}
+
+.loadingGIF {
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
   height: 10vh;
 }
 
 #prompt {
   color: white;
+}
+
+.footer:hover {
+  background-color: violet;
 }
 
 .dropDown {
@@ -25,42 +68,67 @@ header {
 .article {
   position: relative;
   text-align: center;
+  height: 100%;
 }
 
 .articleDisplay {
   color: white;
-  height: 70vh;
+
   align-items: center;
   justify-content: center;
-  display: grid;
-  grid-template-columns: repeat(4, 25vw);
-  grid-template-rows: auto;
+  display: none;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(4, 20vh);
 }
 
-#articleImages {
-  height: 100%;
-  width: 100%;
+.articleImages {
+  /* height: 100%;
+  width: 100%; */
+  object-fit: cover;
+  min-width: 100%;
+  min-height: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
-#articleAbstracts {
+.articleAbstracts {
+  transform: scale(1, 0);
+  transform-origin: bottom;
+  transition: 0.5s;
   z-index: 1;
   position: absolute;
-  bottom: 4px;
+  bottom: 0px;
   background: black;
   opacity: 70%;
   font-size: 16px;
 }
 
+.article:hover .articleAbstracts {
+  transform: scale(1, 1);
+}
+
 @media all and (max-width: 599px) {
-  header {
+  .logoImage {
+    height: 10vh;
+  }
+  .dropDown {
+    margin-left: 0px;
+  }
+  .headerBig {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 95vh;
+  }
+  .headerSmall {
+    height: 25vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   .logoImage {
-    height: 20vw;
+    height: 50%;
   }
 
   .articleDisplay {
@@ -68,9 +136,52 @@ header {
     height: 70vh;
     align-items: center;
     justify-content: center;
-    display: grid;
+    display: none;
     grid-template-columns: repeat(1, 100vw);
-    grid-template-rows: auto;
-    height: 60vh;
+    grid-template-rows: repeat(12, 50vh);
+    height: auto;
+  }
+}
+/* 
+@media all and (min-width: 600 px) and (max-width: 1200px) {
+  .headerBig {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+  }
+  .dropDown {
+    margin-left: none;
+  }
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+} */
+
+@media all and (min-width: 1201px) {
+  .footer {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 2vw;
+  }
+
+  /* .headerBig {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  } */
+
+  .articleDisplay {
+    color: white;
+
+    align-items: center;
+    justify-content: center;
+    display: none;
+    grid-template-columns: repeat(4, 25vw);
+    grid-template-rows: repeat(3, 30vh);
   }
 }
